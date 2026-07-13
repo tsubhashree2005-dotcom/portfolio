@@ -2,61 +2,46 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:100px 100px 80px;
-
-
     background:#0f172a;
-
     color:white;
-
     min-height:90vh;
-
     padding-top:130px;
 }
 
-.hero-left{
+/* Left Section */
 
+.hero-left{
     width:55%;
 }
 
 .hero-left h1{
-
     font-size:70px;
     margin:20px 0;
-
     color:#38bdf8;
-    text-shadow: 0 0 15px rgba(56,189,248,0.5);
+    text-shadow:0 0 15px rgba(56,189,248,0.5);
 }
 
 .hero-left h2{
-
     font-size:30px;
-
     margin-bottom:35px;
 }
 
 .description{
-
     font-size:20px;
-
     color:#cbd5e1;
-
     line-height:1.8;
 }
 
+/* Buttons */
+
 .buttons{
-
     margin-top:45px;
-
     display:flex;
-
     gap:20px;
 }
 
-
 .buttons button{
-
     padding:15px 35px;
     border:none;
     border-radius:10px;
@@ -70,107 +55,99 @@
 }
 
 .buttons button:hover{
-
     transform:translateY(-4px);
     background:#0ea5e9;
     box-shadow:0 10px 25px rgba(56,189,248,0.4);
 }
 
+/* Image */
 
-.hero-right img {
-    width: 350px;
-    border-radius: 50%;
-    border: 6px solid #38bdf8;
-    object-fit: cover;
-
-    animation: floatImage 4s ease-in-out infinite;
-
-    box-shadow: 0 0 25px rgba(56,189,248,0.45);
-
-    transition: 0.4s ease;
+.hero-right img{
+    width:350px;
+    border-radius:50%;
+    border:6px solid #38bdf8;
+    object-fit:cover;
+    animation:floatImage 4s ease-in-out infinite;
+    box-shadow:0 0 25px rgba(56,189,248,0.45);
+    transition:0.4s ease;
 }
 
 .hero-right img:hover{
-    transform: scale(1.05);
+    transform:scale(1.05);
     box-shadow:0 0 35px rgba(56,189,248,0.7);
 }
 
 @keyframes floatImage{
     0%{
-        transform: translateY(0px);
+        transform:translateY(0);
     }
 
     50%{
-        transform: translateY(-15px);
+        transform:translateY(-15px);
     }
 
     100%{
-        transform: translateY(0px);
+        transform:translateY(0);
     }
 }
 
 /* ===========================
-   Mobile Responsive
+   Mobile
 =========================== */
 
 @media (max-width:768px){
 
 .hero{
-
     flex-direction:column;
-
+    justify-content:center;
+    align-items:center;
     text-align:center;
-
-    padding:60px 20px;
-
+    padding:110px 20px 50px;
 }
 
 .hero-left{
-
+    width:100%;
     order:2;
-
 }
 
 .hero-right{
-
+    width:100%;
     order:1;
-
-    margin-bottom:40px;
-
+    margin-bottom:30px;
+    display:flex;
+    justify-content:center;
 }
 
 .hero-right img{
-
-    width:250px;
-
-    height:250px;
-
+    width:220px;
+    height:220px;
 }
 
-.hero h1{
-
-    font-size:40px;
-
+.hero-left h1{
+    font-size:48px;
+    line-height:1.2;
+    word-break:break-word;
 }
 
-.hero h2{
-
+.hero-left h2{
     font-size:24px;
-
+    line-height:1.4;
 }
 
 .description{
-
     font-size:18px;
-
+    line-height:1.8;
 }
 
 .buttons{
-
     justify-content:center;
-
     flex-wrap:wrap;
+}
 
+.buttons button{
+    width:100%;
+    min-width:unset;
+    max-width:300px;
 }
 
 }

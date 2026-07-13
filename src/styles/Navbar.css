@@ -1,4 +1,6 @@
-/* Navbar */
+/* ===========================
+   NAVBAR
+=========================== */
 
 .navbar{
     position: fixed;
@@ -10,59 +12,124 @@
     background: rgba(11,17,32,0.95);
     backdrop-filter: blur(10px);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    padding: 20px 80px;
-    box-sizing: border-box;
+    padding:20px 80px;
+    box-sizing:border-box;
 }
 
-/* Logo */
+/* ===========================
+   LOGO
+=========================== */
 
 .logo{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    margin:0;
 }
 
-/* Navigation */
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+/* ===========================
+   NAV LINKS
+=========================== */
 
 .nav-links{
-    display: flex;
-    list-style: none;
-    gap: 40px;
+    display:flex;
+    list-style:none;
+    gap:40px;
+    margin:0;
+    padding:0;
 }
 
-/* Links */
-
 .nav-links li a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    transition: 0.3s;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+    transition:0.3s;
 }
 
 /* Underline Animation */
 
 .nav-links li a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
 
-    width: 0;
-    height: 2px;
+    width:0;
+    height:2px;
 
-    background: #38bdf8;
-    transition: 0.3s;
+    background:#38bdf8;
+    transition:0.3s;
 }
 
 .nav-links li a:hover{
-    color: #38bdf8;
+    color:#38bdf8;
 }
 
 .nav-links li a:hover::after{
-    width: 100%;
+    width:100%;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+.navbar{
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+.logo{
+    font-size:14px;
+    font-weight:700;
+    max-width:70%;
+}
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.nav-links{
+    display:none;
+    position:fixed;
+    top:65px;
+    left:0;
+    width:100%;
+    background:#0b1120;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:25px 0;
+}
+
+.nav-links.active{
+    display:flex;
+}
+
 }
