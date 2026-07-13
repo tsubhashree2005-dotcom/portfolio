@@ -1,0 +1,176 @@
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:100px 100px 80px;
+
+
+    background:#0f172a;
+
+    color:white;
+
+    min-height:90vh;
+
+    padding-top:130px;
+}
+
+.hero-left{
+
+    width:55%;
+}
+
+.hero-left h1{
+
+    font-size:70px;
+    margin:20px 0;
+
+    color:#38bdf8;
+    text-shadow: 0 0 15px rgba(56,189,248,0.5);
+}
+
+.hero-left h2{
+
+    font-size:30px;
+
+    margin-bottom:35px;
+}
+
+.description{
+
+    font-size:20px;
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+}
+
+.buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    gap:20px;
+}
+
+
+.buttons button{
+
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s ease;
+    background:#38bdf8;
+    color:white;
+    min-width:240px;
+}
+
+.buttons button:hover{
+
+    transform:translateY(-4px);
+    background:#0ea5e9;
+    box-shadow:0 10px 25px rgba(56,189,248,0.4);
+}
+
+
+.hero-right img {
+    width: 350px;
+    border-radius: 50%;
+    border: 6px solid #38bdf8;
+    object-fit: cover;
+
+    animation: floatImage 4s ease-in-out infinite;
+
+    box-shadow: 0 0 25px rgba(56,189,248,0.45);
+
+    transition: 0.4s ease;
+}
+
+.hero-right img:hover{
+    transform: scale(1.05);
+    box-shadow:0 0 35px rgba(56,189,248,0.7);
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+.hero-left{
+
+    order:2;
+
+}
+
+.hero-right{
+
+    order:1;
+
+    margin-bottom:40px;
+
+}
+
+.hero-right img{
+
+    width:250px;
+
+    height:250px;
+
+}
+
+.hero h1{
+
+    font-size:40px;
+
+}
+
+.hero h2{
+
+    font-size:24px;
+
+}
+
+.description{
+
+    font-size:18px;
+
+}
+
+.buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+}
