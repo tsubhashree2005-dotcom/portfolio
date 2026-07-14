@@ -118,23 +118,38 @@
 .nav-links{
     display:none;
     position:fixed;
-    top:65px;
+
+    top:60px;
     left:0;
+
     width:100%;
+    height:calc(100vh - 60px);
 
     background:#0b1120;
 
     flex-direction:column;
+    justify-content:flex-start;
     align-items:center;
-    gap:20px;
 
-    padding:25px 0;
+    gap:30px;
+
+    padding-top:40px;
 
     z-index:9999;
 }
 
 .nav-links.active{
     display:flex !important;
+}
+.nav-links li{
+    width:100%;
+    text-align:center;
+}
+
+.nav-links li a{
+    display:block;
+    padding:10px 0;
+    font-size:20px;
 }
 
 }
