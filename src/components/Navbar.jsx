@@ -15,7 +15,7 @@ function Navbar() {
         className="menu-icon"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        MENU
+        ☰
       </div>
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
