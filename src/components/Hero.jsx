@@ -22,7 +22,7 @@ function Hero(props) {
         <div className="buttons">
 
         <a
-          href="/resume.pdf"
+          href="/T_Subha_Shree_Resume.pdf"
           download
           className="hero-btn"
         >
