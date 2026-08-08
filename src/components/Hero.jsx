@@ -3,6 +3,7 @@ import SocialLinks from "./SocialLinks";
 import profile from "../assets/images/profile.jpg";
 import { Typewriter } from "react-simple-typewriter";
 
+
 function Hero(props) {
   return (
     <section className="hero" id="home">
@@ -23,7 +24,7 @@ function Hero(props) {
 
         <a
           href="/T_Subha_Shree_Resume.pdf"
-          download
+          download="T_Subha_Shree_Resume.pdf"
           className="hero-btn"
         >
           📄 Download Resume
